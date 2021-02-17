@@ -7,5 +7,6 @@ public class StartUI {
         tracker.add(item);
         Item consoleItem = tracker.findById(1);
         System.out.println(consoleItem.getId() + " - " + consoleItem.getName());
+        System.out.println(item.toString());
     }
 }
