@@ -20,7 +20,7 @@ public class StartUI {
                 System.out.println("=== Show all Items ====");
                 Item[] item = tracker.findAll();
                 for (Item items : item) {
-                    System.out.println(items.toString());
+                    System.out.println(items);
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit Item ====");
@@ -49,7 +49,7 @@ public class StartUI {
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
                 if (item != null) {
-                    System.out.println(item.toString());
+                    System.out.println(item);
                 } else {
                     System.out.println("Not found");
                 }
@@ -60,7 +60,7 @@ public class StartUI {
                 Item[] item = tracker.findByName(name);
                 if (item.length > 0) {
                     for (Item items : item) {
-                        System.out.println(items.toString());
+                        System.out.println(items);
                     }
                 } else {
                     System.out.println("Not found");
