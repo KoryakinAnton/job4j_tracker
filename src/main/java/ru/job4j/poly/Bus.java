@@ -3,8 +3,7 @@ package ru.job4j.poly;
 public class Bus implements Transport {
 
     @Override
-    public int passengers(int amount) {
-        return 0;
+    public void passengers(int amount) {
     }
 
     @Override
@@ -13,11 +12,6 @@ public class Bus implements Transport {
     }
 
     @Override
-    public boolean move() {
-        boolean rsl = false;
-        if (refuel(100) == 5600) {
-            rsl = true;
-        }
-        return rsl;
+    public void move() {
     }
 }
