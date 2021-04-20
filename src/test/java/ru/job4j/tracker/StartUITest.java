@@ -78,7 +78,6 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("All items"));
-        String result = item.toString();
         Input in = new StubInput(
                 new String[] {"0", "1"}
         );
@@ -92,7 +91,7 @@ public class StartUITest {
                         "0. Show all items" + System.lineSeparator() +
                             "1. Exit" + System.lineSeparator() +
                                 "=== Show all items ===" + System.lineSeparator() +
-                                  result + System.lineSeparator() +
+                                    item + System.lineSeparator() +
                                     "Menu." + System.lineSeparator() +
                                         "0. Show all items" + System.lineSeparator() +
                                             "1. Exit" + System.lineSeparator()
@@ -104,7 +103,6 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("item"));
-        String result = item.toString();
         Input in = new StubInput(
                 new String[] {"0", "item", "1"}
         );
@@ -118,7 +116,7 @@ public class StartUITest {
                         "0. Find Item by name" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator() +
                         "=== Find Item by name ===" + System.lineSeparator() +
-                        result + System.lineSeparator() +
+                        item + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. Find Item by name" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator()
@@ -130,7 +128,6 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("item"));
-        String result = item.toString();
         String id = String.valueOf(item.getId());
         Input in = new StubInput(
                 new String[] {"0", id, "1"}
@@ -145,7 +142,7 @@ public class StartUITest {
                         "0. Find Item by Id" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator() +
                         "=== Find Item by Id ===" + System.lineSeparator() +
-                        result + System.lineSeparator() +
+                        item + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. Find Item by Id" + System.lineSeparator() +
                         "1. Exit" + System.lineSeparator()
