@@ -29,7 +29,7 @@ public class StartUITest {
         String id = String.valueOf(item.getId());
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"0", id, "New item name", "1"}
+                new String[] {"0", id, replacedName, "1"}
         );
         UserAction[] actions = {
                 new EditAction(out),
