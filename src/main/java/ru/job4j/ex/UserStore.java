@@ -10,17 +10,15 @@ public class UserStore {
         }
         if (rsl == null) {
             throw new UserNotFoundException("User not found");
-        } else {
-            return rsl;
         }
+        return rsl;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if ((user.getUsername().length() > 2) && (user.isValid())) {
-            return true;
-        } else {
+        if ((user.getUsername().length() < 3) || (!user.isValid())) {
             throw new UserInvalidException("Invalid login");
         }
+        return true;
     }
 
     public static void main(String[] args) {
