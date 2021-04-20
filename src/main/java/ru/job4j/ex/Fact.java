@@ -6,10 +6,9 @@ public class Fact {
         int rsl = 1;
         if (n < 0) {
             throw new IllegalArgumentException("Factorial should be positive.");
-        } else {
-            for (int index = 1; index <= n; index++) {
-                rsl *= index;
-            }
+        }
+        for (int index = 1; index <= n; index++) {
+            rsl *= index;
         }
         return rsl;
     }
